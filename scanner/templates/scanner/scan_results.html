@@ -1,0 +1,22 @@
+<!-- scanner/templates/scanner/scan_results.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Network Scan Results</title>
+</head>
+<body>
+    <h1>Connected Devices</h1>
+    <table border="1">
+        <tr>
+            <th>IP Address</th>
+            <th>MAC Address</th>
+        </tr>
+        {% for device in devices %}
+        <tr>
+            <td>{{ device.ip }}</td>
+            <td>{{ device.mac }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
